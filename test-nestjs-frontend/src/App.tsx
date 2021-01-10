@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import {Course} from './interfaces'
+
 
 import './App.css';
+
+import CourseItem from './CourseItem';
 
 
 
@@ -18,7 +22,8 @@ const App = () => {
     <div className="App">
       <ul>
         {courses.map(item=>(
-          <li key={item.id}>{item.title} </li>
+
+          <CourseItem key={item.id} course={item}/>
         ))}
       </ul>
     </div>
